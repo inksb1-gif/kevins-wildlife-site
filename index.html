@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kevin’s Nuisance Animal Control & Removal LLC | Wildlife Removal & Exclusion</title>
+  <meta name="description" content="Rugged, professional wildlife removal and exclusion. Licensed & insured. Serving Western Pennsylvania." />
+
+  <style>
+    :root{
+      --bg:#070a07;
+      --panel:#101610;
+      --panel2:#0c110c;
+      --line:#233123;
+      --text:#f4f4ee;
+      --muted:#c9c6b8;
+      --cream:#efe4cc;
+      --green:#2f5d3a;
+      --orange:#d67a2c;
+      --shadow: 0 18px 40px rgba(0,0,0,.35);
+      --r:18px;
+      --max:1120px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      color:var(--text);
+      background:
+        radial-gradient(900px 520px at 20% 12%, rgba(214,122,44,.16), transparent 55%),
+        radial-gradient(900px 520px at 88% 18%, rgba(47,93,58,.22), transparent 55%),
+        linear-gradient(180deg, #050805, var(--bg));
+      line-height:1.55;
+    }
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 20px}
+    .pill{
+      display:inline-flex; gap:8px; align-items:center;
+      padding:8px 10px; border-radius:999px;
+      border:1px solid rgba(239,228,204,.16);
+      background: rgba(16,22,16,.55);
+      color:var(--muted);
+      font-size:12px;
+    }
+
+    /* Header */
+    header{
+      position:sticky; top:0; z-index:50;
+      background: rgba(5,8,5,.78);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid rgba(35,49,35,.65);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:14px; padding:14px 0;
+    }
+    .brand{display:flex; align-items:center; gap:12px; min-width:240px}
+    .brand img{
+      width:46px; height:46px; border-radius:12px;
+      background: rgba(255,255,255,.06);
+      box-shadow: 0 10px 18px rgba(0,0,0,.35);
+      object-fit:cover;
+    }
+    .brand .t{display:flex; flex-direction:column; line-height:1.1}
+    .brand .t strong{font-size:14px; letter-spacing:.2px}
+    .brand .t span{font-size:12px; color:var(--muted)}
+    nav ul{list-style:none; margin:0; padding:0; display:flex; gap:16px; flex-wrap:wrap; justify-content:flex-end}
+    nav a{
+      font-size:13px; color:var(--muted);
+      padding:9px 10px; border-radius:12px;
+      transition: all .16s ease;
+    }
+    nav a:hover{color:var(--text); background: rgba(239,228,204,.07)}
+
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:11px 14px; border-radius:14px;
+      border:1px solid rgba(239,228,204,.18);
+      background: rgba(16,22,16,.6);
+      box-shadow: 0 10px 18px rgba(0,0,0,.22);
+      color:var(--text);
+      font-weight:700; font-size:13px; letter-spacing:.2px;
+      transition: transform .14s ease, border-color .14s ease;
+      cursor:pointer;
+      white-space:nowrap;
+    }
+    .btn:hover{transform: translateY(-1px); border-color: rgba(214,122,44,.45)}
+    .btn.primary{
+      background: linear-gradient(180deg, rgba(214,122,44,.95), rgba(171,85,28,.96));
+      border-color: rgba(214,122,44,.65);
+      color:#1b1209;
+    }
+
+    /* Hero */
+    .hero{padding:44px 0 22px}
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    .card{
+      background: linear-gradient(180deg, rgba(16,22,16,.72), rgba(12,17,12,.72));
+      border:1px solid rgba(35,49,35,.75);
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+      padding: 18px;
+    }
+    h1{margin:12px 0 10px; font-size:40px; line-height:1.08; letter-spacing:-.6px}
+    .sub{color:var(--muted); font-size:16px; max-width: 62ch}
+    .heroActions{display:flex; gap:10px; flex-wrap:wrap; margin-top:16px}
+    .heroFine{margin-top:12px; color:var(--muted); font-size:12px}
+    .logoCard{
+      display:flex; flex-direction:column; gap:12px; justify-content:space-between;
+    }
+    .logoBig{
+      width:100%;
+      max-width: 420px;
+      margin: 0 auto;
+      border-radius: 16px;
+      background: rgba(0,0,0,.18);
+      border:1px solid rgba(239,228,204,.10);
+      padding:14px;
+    }
+    .logoBig img{width:100%; height:auto; display:block}
+    .quickList{display:grid; gap:10px; margin:0; padding:0; list-style:none}
+    .quickList li{
+      padding:12px 12px;
+      border-radius:14px;
+      border:1px solid rgba(35,49,35,.65);
+      background: rgba(10,14,10,.35);
+    }
+    .quickList strong{display:block; font-size:13px}
+    .quickList span{display:block; color:var(--muted); font-size:12px; margin-top:2px}
+
+    /* Sections */
+    section{padding:22px 0}
+    .grid3{display:grid; grid-template-columns: repeat(3, 1fr); gap:14px}
+    .grid2{display:grid; grid-template-columns: repeat(2, 1fr); gap:14px}
+    .kicker{color:var(--cream); font-weight:800; letter-spacing:.25px}
+    h2{margin:8px 0 12px; font-size:26px; letter-spacing:-.3px}
+    p{margin:0 0 12px}
+    .svc{
+      padding:16px;
+      border-radius: var(--r);
+      border:1px solid rgba(35,49,35,.75);
+      background: rgba(16,22,16,.58);
+      box-shadow: 0 12px 26px rgba(0,0,0,.25);
+    }
+    .svc h3{margin:0 0 6px; font-size:15px}
+    .svc p{margin:0; color:var(--muted); font-size:13px}
+    .tagRow{display:flex; flex-wrap:wrap; gap:8px; margin-top:12px}
+    .tag{
+      font-size:12px; color:var(--muted);
+      border:1px solid rgba(239,228,204,.14);
+      background: rgba(239,228,204,.06);
+      padding:7px 10px; border-radius:999px;
+    }
+
+    /* Contact */
+    .contactWrap{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+      align-items:stretch;
+    }
+    .formRow{display:grid; grid-template-columns: 1fr 1fr; gap:10px}
+    label{display:block; font-size:12px; color:var(--muted); margin:0 0 6px}
+    input, textarea, select{
+      width:100%;
+      padding:12px 12px;
+      border-radius: 14px;
+      border:1px solid rgba(35,49,35,.9);
+      background: rgba(7,10,7,.55);
+      color:var(--text);
+      outline:none;
+    }
+    textarea{min-height:120px; resize:vertical}
+    input:focus, textarea:focus, select:focus{border-color: rgba(214,122,44,.55)}
+    .small{font-size:12px; color:var(--muted)}
+    footer{
+      padding:28px 0 36px;
+      border-top:1px solid rgba(35,49,35,.65);
+      color:var(--muted);
+      font-size:12px;
+    }
+
+    /* Responsive */
+    @media (max-width: 920px){
+      .heroGrid{grid-template-columns: 1fr}
+      h1{font-size:34px}
+      .grid3{grid-template-columns: 1fr}
+      .grid2{grid-template-columns: 1fr}
+      .contactWrap{grid-template-columns: 1fr}
+      .formRow{grid-template-columns: 1fr}
+      nav ul{display:none} /* keep it clean on mobile */
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="wrap">
+    <div class="nav">
+      <a class="brand" href="#top" aria-label="Home">
+        <!-- Put your generated logo here: assets/logo.png -->
+        <img src="assets/logo.png" alt="Kevin’s Nuisance Animal Control & Removal LLC logo">
+        <div class="t">
+          <strong>Kevin’s Nuisance Animal Control & Removal LLC</strong>
+          <span>Wildlife Removal & Exclusion • Western PA</span>
+        </div>
+      </a>
+
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#process">How It Works</a></li>
+          <li><a href="#areas">Service Area</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="cta">
+        <!-- Replace with Kevin’s real number -->
+        <a class="btn" href="tel:+17245551234">Call (724) 555-1234</a>
+        <a class="btn primary" href="#contact">Get an Estimate</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <div class="heroGrid">
+      <div class="card">
+        <span class="pill">Licensed & Insured • PA Certified NWCO</span>
+        <h1>Rugged, professional wildlife removal — done right the first time.</h1>
+        <p class="sub">
+          From raccoons in the attic to groundhogs under the shed, we handle nuisance wildlife safely and humanely — then
+          we seal up entry points so the problem doesn’t come back.
+        </p>
+
+        <div class="heroActions">
+          <a class="btn primary" href="tel:+17245551234">Call for Same-Day Service</a>
+          <a class="btn" href="#services">See Services</a>
+        </div>
+
+        <div class="tagRow">
+          <span class="tag">Raccoon</span>
+          <span class="tag">Opossum</span>
+          <span class="tag">Skunk</span>
+          <span class="tag">Squirrel</span>
+          <span class="tag">Groundhog</span>
+          <span class="tag">Exclusion & Repairs</span>
+        </div>
+
+        <p class="heroFine">Emergency / after-hours available. Inspection fees may be credited toward work (set your policy).</p>
+      </div>
+
+      <aside class="card logoCard">
+        <div class="logoBig" aria-label="Logo panel">
+          <img src="assets/logo.png" alt="Kevin’s wildlife control logo large">
+        </div>
+
+        <ul class="quickList">
+          <li>
+            <strong>Fast Response</strong>
+            <span>Call or message for availability and next steps.</span>
+          </li>
+          <li>
+            <strong>Removal + Exclusion</strong>
+            <span>We don’t just remove— we prevent re-entry.</span>
+          </li>
+          <li>
+            <strong>Clear Pricing</strong>
+            <span>Written estimates for removal and repair options.</span>
+          </li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="kicker">Services</div>
+      <h2>Wildlife control focused on long-term prevention</h2>
+      <div class="grid3">
+        <div class="svc">
+          <h3>Removal & Trapping</h3>
+          <p>Humane capture/removal for nuisance wildlife with compliant handling and clear documentation.</p>
+        </div>
+        <div class="svc">
+          <h3>Home & Structure Exclusion</h3>
+          <p>Entry-point sealing, hardware cloth, one-way doors (when appropriate), and durable repairs.</p>
+        </div>
+        <div class="svc">
+          <h3>Inspections & Reports</h3>
+          <p>Full property inspection, photos, and a written action plan—great for realtors and property managers.</p>
+        </div>
+
+        <div class="svc">
+          <h3>Attic / Crawlspace Issues</h3>
+          <p>Odor source identification, nesting area cleanup recommendations, and prevention options.</p>
+        </div>
+        <div class="svc">
+          <h3>Dead Animal Removal</h3>
+          <p>Safe removal and disposal with optional deodorizing recommendations.</p>
+        </div>
+        <div class="svc">
+          <h3>Emergency Calls</h3>
+          <p>After-hours response when available for urgent situations (fees may apply).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="wrap">
+      <div class="kicker">How it works</div>
+      <h2>Simple, no-nonsense process</h2>
+      <div class="grid2">
+        <div class="card">
+          <h3 style="margin:0 0 8px">1) Inspect</h3>
+          <p style="color:var(--muted); margin:0">We identify the animal, entry points, damage, and safety concerns—then provide options.</p>
+        </div>
+        <div class="card">
+          <h3 style="margin:0 0 8px">2) Remove</h3>
+          <p style="color:var(--muted); margin:0">Humane removal/trapping using proven methods and the right equipment.</p>
+        </div>
+        <div class="card">
+          <h3 style="margin:0 0 8px">3) Exclude</h3>
+          <p style="color:var(--muted); margin:0">We seal entry points and reinforce vulnerable areas so animals can’t return.</p>
+        </div>
+        <div class="card">
+          <h3 style="margin:0 0 8px">4) Warranty (optional)</h3>
+          <p style="color:var(--muted); margin:0">Offer a written workmanship warranty for exclusion work (set your terms).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="areas">
+    <div class="wrap">
+      <div class="kicker">Service Area</div>
+      <h2>Serving Western Pennsylvania</h2>
+      <div class="card">
+        <p style="margin:0 0 10px; color:var(--muted)">
+          Update this section with Kevin’s exact counties/towns. Suggested default:
+        </p>
+        <div class="tagRow">
+          <span class="tag">Westmoreland County</span>
+          <span class="tag">Allegheny County</span>
+          <span class="tag">Armstrong County</span>
+          <span class="tag">Butler County</span>
+          <span class="tag">Fayette County</span>
+          <span class="tag">Washington County</span>
+        </div>
+        <p class="small" style="margin-top:12px">Travel fees may apply outside the primary service radius.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <div class="wrap">
+      <div class="kicker">Reviews</div>
+      <h2>Built on trust and results</h2>
+      <div class="grid3">
+        <div class="card">
+          <p style="margin:0 0 8px">“Showed up fast, handled the raccoon situation professionally, and sealed everything up.”</p>
+          <div class="small">— Homeowner, Westmoreland County</div>
+        </div>
+        <div class="card">
+          <p style="margin:0 0 8px">“Clear estimate, solid workmanship, and no repeat issues.”</p>
+          <div class="small">— Property Manager</div>
+        </div>
+        <div class="card">
+          <p style="margin:0 0 8px">“Great communication from start to finish. Would use again.”</p>
+          <div class="small">— Realtor</div>
+        </div>
+      </div>
+      <p class="small" style="margin-top:10px">Replace these with real Google reviews once Kevin has them.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="kicker">Contact</div>
+      <h2>Request an inspection or estimate</h2>
+
+      <div class="contactWrap">
+        <div class="card">
+          <h3 style="margin:0 0 10px">Call / Text</h3>
+          <p style="color:var(--muted); margin:0 0 10px">
+            Fastest response is phone. If you text, include your address and a quick description.
+          </p>
+
+          <div class="tagRow">
+            <a class="btn primary" href="tel:+17245551234">Call (724) 555-1234</a>
+            <a class="btn" href="sms:+17245551234">Text Us</a>
+          </div>
+
+          <div style="margin-top:14px" class="small">
+            Business Hours: Mon–Sat 7am–7pm (example) • After-hours emergency when available
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 style="margin:0 0 10px">Online Request (Email Form)</h3>
+          <!-- This form uses a mailto: link (works without hosting). When you host the site, swap this for a real form endpoint. -->
+          <form id="reqForm">
+            <div class="formRow">
+              <div>
+                <label for="name">Name</label>
+                <input id="name" name="name" placeholder="Your name" required />
+              </div>
+              <div>
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" placeholder="(###) ###-####" required />
+              </div>
+            </div>
+
+            <div style="margin-top:10px">
+              <label for="address">Address / Town</label>
+              <input id="address" name="address" placeholder="Street, City" required />
+            </div>
+
+            <div class="formRow" style="margin-top:10px">
+              <div>
+                <label for="animal">Suspected Animal</label>
+                <select id="animal" name="animal">
+                  <option>Raccoon</option>
+                  <option>Opossum</option>
+                  <option>Skunk</option>
+                  <option>Squirrel</option>
+                  <option>Groundhog</option>
+                  <option>Other / Not sure</option>
+                </select>
+              </div>
+              <div>
+                <label for="urgency">Urgency</label>
+                <select id="urgency" name="urgency">
+                  <option>Same day (if available)</option>
+                  <option>Within 48 hours</option>
+                  <option>This week</option>
+                  <option>Not urgent</option>
+                </select>
+              </div>
+            </div>
+
+            <div style="margin-top:10px">
+              <label for="details">Details</label>
+              <textarea id="details" name="details" placeholder="Where is the issue (attic, soffit, under deck)? Any noises, damage, or sightings?"></textarea>
+            </div>
+
+            <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px">
+              <button class="btn primary" type="submit">Send Request</button>
+              <button class="btn" type="reset">Clear</button>
+            </div>
+
+            <p class="small" style="margin-top:10px">
+              Tip: Photos help. Once hosted, add a file upload or a “Text photos to…” note.
+            </p>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap">
+      <div>© <span id="yr"></span> Kevin’s Nuisance Animal Control & Removal LLC</div>
+      <div>Licensed & Insured • PA Certified NWCO • Western Pennsylvania</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Set year
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Simple mailto form (no hosting required)
+  document.getElementById('reqForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = encodeURIComponent(document.getElementById('name').value.trim());
+    const phone = encodeURIComponent(document.getElementById('phone').value.trim());
+    const address = encodeURIComponent(document.getElementById('address').value.trim());
+    const animal = encodeURIComponent(document.getElementById('animal').value);
+    const urgency = encodeURIComponent(document.getElementById('urgency').value);
+    const details = encodeURIComponent(document.getElementById('details').value.trim());
+
+    // Replace this email with Kevin’s email when ready
+    const to = "kevin@example.com";
+    const subject = `Wildlife Service Request - ${decodeURIComponent(animal)}`;
+    const body =
+`Name: ${decodeURIComponent(name)}%0D%0A` +
+`Phone: ${decodeURIComponent(phone)}%0D%0A` +
+`Address/Town: ${decodeURIComponent(address)}%0D%0A` +
+`Suspected Animal: ${decodeURIComponent(animal)}%0D%0A` +
+`Urgency: ${decodeURIComponent(urgency)}%0D%0A%0D%0A` +
+`Details:%0D%0A${decodeURIComponent(details)}`;
+
+    window.location.href = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${body}`;
+  });
+</script>
+</body>
+</html>
